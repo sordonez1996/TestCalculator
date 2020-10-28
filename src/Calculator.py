@@ -18,7 +18,7 @@ def square(a):
 
 def squareRoot(a):
     r = math.sqrt(float(a))
-    rounded = "{:.8f)".format(round(a, 8))
+    rounded = (round(r, 8))
     return float (rounded)
 
 class Calculator:

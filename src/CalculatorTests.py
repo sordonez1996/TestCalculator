@@ -36,8 +36,21 @@ class MyTestCase(unittest.TestCase):
         pprint(test_data)
         for row in test_data:
             self.assertEqual(self.calculator.division(row['Value 2'], row ['Value 1']), float(row['Result']))
-            self.assertEqual(self.calculator.result, float(row[Result]))
+            self.assertEqual(self.calculator.result, float(row['Result']))
 
+
+    def test_square_method_calculator(self):
+        test_data = CsvReader ('/src/Unit_square.csv').data
+        pprint(test_data)
+        for row in test_data:
+            self.assertEqual(self.calculator.square(row['Value 1']), float(row['Result']))
+
+    def test_squareRoot_method_calculator(self):
+        test_data = CsvReader ('/src/Unit_test_square_root.csv').data
+        pprint(test_data)
+        for row in test_data:
+            self.assertEqual(self.calculator.squareRoot(row['Value 1']), float(row['Result']))
+            self.assertEqual(self.calculator.result, float(row['Result']))
 
 if __name__ == '__main__':
-    unittest.main()
+   unittest.main()

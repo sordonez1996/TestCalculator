@@ -17,9 +17,9 @@ def square(a):
     return float(a) ** 2
 
 def squareRoot(a):
-    r = math.sqrt(float(a))
-    rounded = (round(r, 8))
-    return float (rounded)
+    root = float(a) ** 0.5
+    roundRoot = round(root, 8)
+    return roundRoot
 
 class Calculator:
     result = 0
